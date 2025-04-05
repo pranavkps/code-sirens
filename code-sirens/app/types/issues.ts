@@ -9,6 +9,8 @@ export interface IssueHeaders {
     [key: string]: string;
 }
 
+export type SeverityLevel = "HIGH" | "MEDIUM" | "LOW";
+
 export interface IssueDetails extends Issue {
     stackTrace: string[];
     traceId: string | null;
@@ -26,6 +28,6 @@ export interface Issue {
     age: string;
     status: string;
     counter: number;
-    seriarity: string;
+    severity: SeverityLevel;
     events?: IssueEvent[];
 } 
